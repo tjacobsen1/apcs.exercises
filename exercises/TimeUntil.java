@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.time.LocalDateTime;
-public class Time
+public class TimeUntil
 {
     public static void main(String[] args)
     {
