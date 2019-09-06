@@ -29,10 +29,10 @@ public class TimeExercise
         currentsec = LocalDateTime.now().getSecond();
 
         hrleft = hours - currenthour;
-        if (currenthour > 12) {
-            currenthour = currenthour - 12;
+        //if (currenthour >= 12) {
+         //   currenthour = currenthour - 12;
 
-        }
+        //}
         
         minleft = minutes - currentmins;
         secleft = seconds - currentsec;
