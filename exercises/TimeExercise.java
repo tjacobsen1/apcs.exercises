@@ -17,7 +17,7 @@ public class TimeExercise
         int minleft;
         int secleft;
 
-        System.out.println("Enter the hours: ");
+        System.out.println("Enter the hours in the future: ");
         hours = scan.nextInt();
         System.out.println("Enter the minutes: ");
         minutes = scan.nextInt();
@@ -27,13 +27,16 @@ public class TimeExercise
         currenthour = LocalDateTime.now().getHour();
         currentmins = LocalDateTime.now().getMinute();
         currentsec = LocalDateTime.now().getSecond();
-
-        hrleft = hours - currenthour;
-        //if (currenthour >= 12) {
-         //   currenthour = currenthour - 12;
-
-        //}
         
+        if (currenthour >= 12) {
+           currenthour = currenthour - 12;
+        }
+        
+        hrleft = hours - currenthour;
+       
+        // System.out.println("Hours left: " + hrleft);
+        // System.out.println("Hours: " + hours);
+        // System.out.println("Current hour: " + currenthour);
         minleft = minutes - currentmins;
         secleft = seconds - currentsec;
         
