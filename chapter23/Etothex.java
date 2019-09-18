@@ -11,7 +11,7 @@ public class Etothex {
         x = scan.nextInt();
         
         while (term > 1.0E-12) {
-            1
+            sum = sum + term;
         }
 
     }
