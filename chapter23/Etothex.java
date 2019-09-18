@@ -7,7 +7,7 @@ public class Etothex {
         int x, term, sum = 0;
 
         while (term > 1.0E-12) {
-            
+            1
         }
 
     }
