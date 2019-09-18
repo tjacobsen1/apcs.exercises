@@ -9,10 +9,10 @@ public class Words
         String word1, word2;
         int dots;
 
-        System.out.println("Enter First word:");
+        System.out.println("Enter first word:");
         word1 = scan.nextLine();
 
-        System.out.println("Enter Second word:");
+        System.out.println("Enter second word:");
         word2 = scan.nextLine();
 
         dots = 30 - (word1.length() + word2.length());
