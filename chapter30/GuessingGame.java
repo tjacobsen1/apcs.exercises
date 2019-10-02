@@ -12,22 +12,23 @@ public class GuessingGame {
         int tries = 3;
         boolean hasWon = false;
 
-        while (!hasWon) {
+        while (tries != 0) {
             System.out.println("Give me a number from 1 to 10: \nYou must guess it in three tries.");
             guess = scan.nextInt();
             tries--;
 
             if (guess == numberToGuess) {
                 hasWon = true;
+                System.out.println("You win! You guessed it in under 3 tries.");
             } else if (guess != numberToGuess) {
                 System.out.println("Wrong, try again. ");
             }
             
-            if (tries == 0) {
-                System.out.println("You have used your 3 tries. Your number was " + numberToGuess + ". Please try again.");
-                return;
-            }
+            // if (tries < 0) {
+            //     System.out.println("You have used your 3 tries. Your number was " + numberToGuess + ". Please try again.");
+            //     return;
+            // }
         }
-        System.out.println("You win! You guessed it in under 3 tries.");
+        System.out.println("The number was " + numberToGuess);
     }
 }
