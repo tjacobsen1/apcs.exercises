@@ -1,24 +1,20 @@
-import java.util.Scanner;
-
 public class Cone {
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    private double r;
 
-        double r, h;
+    private double h;
 
-        System.out.println("Input the radius: ");
-        r = scan.nextDouble();
-
-        System.out.println("Input the height: ");
-        h = scan.nextDouble();
-
-        Cone cone = new Cone(r, h);
-
-        System.out.println("Slant Height: " + slantHeight);
-        System.out.println("Angle: " + angle);
+    public Cone(double rad, double hei) {
+        r = rad;
+        h = hei;
     }
 
-    
 
+    public double area() {
+        return Math.PI*r*(r + Math.sqrt(h*h + r*r));
+    }
+
+    public double volume() {
+        return Math.PI*r*r*h/3.0;
+    }
 }
