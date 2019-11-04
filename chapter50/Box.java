@@ -10,9 +10,15 @@ public class Box {
         length = len;
     }
 
-    public Box (double side) {
-
+    public Box (Box oldBox) {
+        width = oldBox.width();
+        height = oldBox.height();
+        length = oldBox.length();
     }
+
+    // public Box biggerBox(Box oldBox) {
+    //     return new Box(1.25*oldBox.width(), 1.25*oldBox.height(), 1.25*oldBox.length());
+    // }
     
     public double width() {
         return width;
