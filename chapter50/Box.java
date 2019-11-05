@@ -14,11 +14,24 @@ public class Box {
         width = oldBox.width();
         height = oldBox.height();
         length = oldBox.length();
+        biggerBox(oldBox);
     }
 
-    // public Box biggerBox(Box oldBox) {
-    //     return new Box(1.25*oldBox.width(), 1.25*oldBox.height(), 1.25*oldBox.length());
-    // }
+    public Box biggerBox(Box oldBox) {
+        return new Box(1.25*oldBox.width(), 1.25*oldBox.height(), 1.25*oldBox.length());
+    }
+
+    public Box smallerBox(Box oldBox) {
+        return new Box(oldBox.width()*0.75, oldBox.height()*0.75, oldBox.length()*0.75);
+    }
+
+    public boolean nests(Box outsideBox) {
+        if(outsideBox.width() > width && outsideBox.height() > height && outsideBox.length() > length) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
     public double width() {
         return width;
