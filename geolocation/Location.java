@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Location {
 
     private double longitude = 0;
