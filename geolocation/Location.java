@@ -35,7 +35,7 @@ public class Location {
 
     public String getName() {
         return name;
-    }
+    }   
 
     public double findDistance(Location otherLocation) {
         double lat2 = otherLocation.getLat();
