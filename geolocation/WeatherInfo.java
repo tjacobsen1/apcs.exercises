@@ -3,7 +3,7 @@ public class WeatherInfo {
     public Location location;
     double temp = 0;
     
-    public class WeatherInfo(Location location, double temp) {
+    public WeatherInfo(Location location, double temp) {
         this.location = location;
         this.temp = temp;
     }
@@ -24,11 +24,13 @@ public class WeatherInfo {
         return temp;
     }
 
-    public double CnD(WeatherInfo[] infos, int distance, double temp) {
-        int numOfLocations = 0;
-        for int i =0; i <infos.length; i++) {
-            numOfLocations++;
-        }
-    }
-    return numOfLocations / infos.length;
+    // public double CnD(WeatherInfo[] infos, int distance, double temp) {
+    //     int numOfLocations = 0;
+    //     for (int i =0; i < infos.length; i++) {
+    //         if(this.location.findDistance(infos[i].location) < distance && infos[i].getTemp > temp) {
+    //         numOfLocations++;
+    //         }
+    //     }
+    //     return numOfLocations / infos.length;
+    // }
 }

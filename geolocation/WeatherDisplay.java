@@ -9,6 +9,6 @@ public class WeatherDisplay {
                                           info.getLong() + " \nTemp: " + 
                                           info.getTemp());
 
-        System.out.println("Cnd: " + info.Cnd);
+        // System.out.println("Cnd: " + info.CnD);
     }
 }
