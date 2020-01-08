@@ -5,7 +5,7 @@ public class Tax {
         Scanner scan = new Scanner(System.in);
         double income, taxes, percentage;
         taxes = 0;
-        System.out.println("what is your yearly income in dollars?");
+        System.out.println("What is your yearly income in dollars?");
         income = scan.nextDouble();
 
         if (income < 15000) {
