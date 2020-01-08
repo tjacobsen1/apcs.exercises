@@ -19,6 +19,7 @@ public class Digits {
             next = next / 10;
             i++;
         }
+        System.out.println("Setting up my new computer");
     }
 
     // Part B
@@ -31,4 +32,6 @@ public class Digits {
         }
     return true;
     }
+
+    
 }
