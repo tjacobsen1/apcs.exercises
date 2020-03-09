@@ -1,4 +1,5 @@
-import com.sun.prism.paint.Color;
+// import com.sun.prism.paint.Color;
+import java.awt.*;
 
 public class Board {
     private Square[][] squares;
@@ -31,14 +32,14 @@ public class Board {
         for(int row = 0; row < 8; row++) {
             for(int col = 0; row < 8; col++) {
                 if(square.getColor() == Color.BLACK) {
-                    System.out.println("*");
+                    System.out.println("[B]");
                 } else {
-                    System.out.println("-");
+                    System.out.println("[W]");
                 }
                 if(square.isHighlighted()) {
-                    System.out.println("[]");
+                    System.out.println("[H]");
                 }
-                if (square.getPiece != null) {
+                if (square.getPiece() != null) {
                     System.out.println(square.getPiece);
                 }
             }
@@ -47,6 +48,7 @@ public class Board {
 
 
     public Square getSquare(int rank, int file) {
-        
+        this.rank = rank;
+        this.file = file;
     }
 }

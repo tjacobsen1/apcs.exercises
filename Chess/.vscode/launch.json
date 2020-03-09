@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ChessTester",
+            "request": "launch",
+            "mainClass": "ChessTester"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - chessTester",
+            "request": "launch",
+            "mainClass": "chessTester"
+        }
+    ]
+}

@@ -6,7 +6,7 @@ public class Square {
     private boolean isHighlighted = false;
     private String piece = null;
 
-    private Square(int rank, int file, Color color) {
+    public Square(int rank, int file, Color color) {
         this.rank = rank;
         this.file = file;
         this.color = color;
