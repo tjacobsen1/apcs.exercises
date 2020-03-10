@@ -4,6 +4,12 @@
             "type": "java",
             "name": "CodeLens (Launch) - ChessGame",
             "request": "launch",
+            "mainClass": "ChessGame"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ChessGame",
+            "request": "launch",
             "mainClass": "ChessGame",
             "projectName": "Chess_d169fcb3"
         },

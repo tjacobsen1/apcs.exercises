@@ -7,20 +7,17 @@ public class Square
     private boolean isHighlighted = false;
     private String piece = null;
 
-    public Square ( int rank, int file, Color color)
-    {
+    public Square ( int rank, int file, Color color) {
         this.rank = rank;
         this.file = file;
         this.color = color; 
     }
 
-    public void toggleHighlight() 
-    {
+    public void toggleHighlight() {
         this.isHighlighted = !isHighlighted;
     }
 
-    public boolean isHighlighted()
-    {
+    public boolean isHighlighted() {
         return this.isHighlighted;
     }
 
