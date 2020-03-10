@@ -20,35 +20,43 @@ public class Board {
                 if (isBlack) {
                     color = Color.BLACK;
                 }
-
+                
                 squares[row][col] = new Square(rank, file, color);
                 isBlack = !isBlack;
                 
             }
         }
     }
-
-    public void printBoard() {
-        for(int row = 0; row < 8; row++) {
-            for(int col = 0; row < 8; col++) {
-                if(square.getColor() == Color.BLACK) {
-                    System.out.println("[B]");
-                } else {
-                    System.out.println("[W]");
-                }
-                if(square.isHighlighted()) {
-                    System.out.println("[H]");
-                }
-                if (square.getPiece() != null) {
-                    System.out.println(square.getPiece);
-                }
-            }
-        }
+    
+    public Square getSquare(int rank, int file) {
+        int row = squares.length - rank;
+        int col = file - 1;
+        return squares[row][col];
     }
 
-
-    public Square getSquare(int rank, int file) {
-        this.rank = rank;
-        this.file = file;
+    public String toString() {
+        String output = "";
+        String middle = "";
+        for(int row = 0; row < squares.length; row++) {
+            for(int col = 0; col < squares[row].length; col++) {
+                output+="[";
+                if(squares[row][col].getColor() == Color.BLACK) {
+                    middle = "B";
+                }
+                if (squares[row][col].getColor() != Color.BLACK) {
+                    middle = "W";
+                }
+                if(squares[row][col].isHighlighted()) {
+                    middle = "H";
+                }
+                if (squares[row][col].getPiece() != null) {
+                    middle = squares[row][col].getPiece();
+                }
+                output+=middle;
+                output+="]" + " ";
+            }
+            output+="\n";
+        }
+        return output;
     }
 }

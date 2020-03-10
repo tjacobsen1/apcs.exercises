@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ChessGame",
+            "request": "launch",
+            "mainClass": "ChessGame",
+            "projectName": "Chess_d169fcb3"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ChessTester",
             "request": "launch",
             "mainClass": "ChessTester"

@@ -7,17 +7,19 @@ public class ChessGame {
         this.board = new Board();
     }
 
-    public void placeRook(int rank, int file) {
+    public void placeRook(Board board, int rank, int file) {
         // board.clearBoard();
-        Square square = board.getSquare(rank, file);
+        board.getSquare(rank,file).setPiece("r");
 
-        for (int row = 0; row < 8; row++) {
-            board.getSquare(row, file).isHighlighted();
-        }
-
-        for (int col = 0; col < 8; col++) {
-            if (col == file) {
-                board.getSquare(rank, col).isHighlighted();
+        for (int row = 1; row <= 8; row++) {
+            for (int col = 1; col <= 8; col++) {
+                if (row == rank) {
+                    board.getSquare(row, col).toggleHighlight();
+                }
+                
+                if (col == file) {
+                    board.getSquare(row, col).toggleHighlight();
+                }
             }
         }
     }
@@ -38,5 +40,11 @@ public class ChessGame {
     //     }
     // }
 
-    
+    public static void main(String[] args) {
+        Board board = new Board();
+        ChessGame game = new ChessGame();
+
+        game.placeRook(board, 1,2);
+        System.out.println(board);
+    }
 }
